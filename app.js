@@ -77,7 +77,7 @@ function enviar_texto(senderID, response){
     
     // Enviar el requisito HTTP a la plataforma de messenger
     request({
-        "uri": "https://graph.facebook.com/v2.6/me/messages",
+        "uri": "https://graph.facebook.com/v2.12/me/messages",
         "qs": { "access_token": process.env.PAGE_ACCESS_TOKEN },
         "method": "POST",
         "json": request_body
