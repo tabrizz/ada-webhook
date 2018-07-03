@@ -52,14 +52,16 @@ function process_event(event){
     // Capturamos los datos del que genera el evento y el mensaje 
     const senderID = event.sender.id;
     const message = event.message;
-    
-    console.log('message', message);
+    let response = {};
+
+    console.log('message', message.text);
     // Si en el evento existe un mensaje de tipo texto
     if(message.text){
         // Crear un payload para un simple mensaje de texto
-        const response = {
+        response = {
             "text": 'Enviaste este mensaje: ' + message.text
         }
+        console.log('response',response.text);
     }
     
     // Enviamos el mensaje mediante SendAPI
