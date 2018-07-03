@@ -53,6 +53,7 @@ function process_event(event){
     const senderID = event.sender.id;
     const message = event.message;
     
+    console.log('message', message);
     // Si en el evento existe un mensaje de tipo texto
     if(message.text){
         // Crear un payload para un simple mensaje de texto
